@@ -1,0 +1,16 @@
+# $FreeBSD$
+
+PORTNAME=	librender
+PORTVERSION=	1.0
+CATEGORIES=	devel
+
+MAINTAINER=	koue@chaosophia.net
+COMMENT=	librender
+
+LICENSE=	BSD2CLAUSE
+
+USE_GITHUB=	yes
+GH_ACCOUNT=	koue
+GH_PROJECT=	librender
+
+.include <bsd.port.mk>
