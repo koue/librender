@@ -121,7 +121,7 @@ render_purge(struct render *render)
 }
 
 int
-render_call(struct render *render, const char *macro, void *data)
+render_run(struct render *render, const char *macro, void *data)
 {
 	struct render_entry *entry;
 	FILE *f;

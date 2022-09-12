@@ -51,6 +51,6 @@ int render_add(struct render *render, const char *macro, const char *filepath, v
 struct render_entry *render_get(struct render *render, const char *macro);
 int render_remove(struct render *render, const char *macro);
 void render_purge(struct render *render);
-int render_call(struct render *render, const char *macro, void *arg);
+int render_run(struct render *render, const char *macro, void *arg);
 
 #endif

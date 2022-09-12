@@ -90,10 +90,10 @@ void render_data(const char *macro, void *arg)
 	assert(strcmp(item->p2, "param2") == 0);
 	assert(item->pi == 10);
 	if (strcmp(macro, "TOP") == 0) {
-		assert(render_call(&render, "TOP", NULL) == 0);
+		assert(render_run(&render, "TOP", NULL) == 0);
 	}
 	if (strcmp(macro, "MIDDLE") == 0) {
-		assert(render_call(&render, "MIDDLE", NULL) == 0);
+		assert(render_run(&render, "MIDDLE", NULL) == 0);
 	}
 }
 
@@ -126,7 +126,7 @@ main(void)
 	assert(render_add(&render, "MACRO_FILE", "RENDER.template",
 	    (mydata *)render_data) == 0);
 	assert((entry = render_get(&render, "MACRO_FILE")) != NULL);
-	assert(render_call(&render, "MACRO_FILE", (void *)&DATA) == 0);
+	assert(render_run(&render, "MACRO_FILE", (void *)&DATA) == 0);
 	assert(render_remove(&render, "MACRO_FILE") == 0);
 	assert(render_remove(&render, "notexist") == -1);
 	assert(render_get(&render, "MACRO_FILE") == NULL);
@@ -135,7 +135,7 @@ main(void)
 	assert(render_add(&render, "MACRO_SIMPLE", NULL,
 	    (mydata *)render_simple) == 0);
 	assert((entry = render_get(&render, "MACRO_SIMPLE")) != NULL);
-	assert(render_call(&render, "MACRO_SIMPLE", (void *)&DATA) == 0);
+	assert(render_run(&render, "MACRO_SIMPLE", (void *)&DATA) == 0);
 	assert(render_remove(&render, "MACRO_SIMPLE") == 0);
 	assert(render_remove(&render, "notexist") == -1);
 	assert(render_get(&render, "MACRO_SIMPLE") == NULL);
