@@ -2,6 +2,6 @@
 
 Status:
 -------
-master | develop
+main | develop
 -------|--------
-[![Build Status](https://cipier.net/status/koue/librender/master)](https://cipier.net/status/koue/librender/master) | [![Build Status](https://cipier.net/status/koue/librender/develop)](https://cipier.net/status/koue/librender/develop)
+[![Build Status](https://cipier.net/status/koue/librender/main)](https://cipier.net/status/koue/librender/master) | [![Build Status](https://cipier.net/status/koue/librender/develop)](https://cipier.net/status/koue/librender/develop)
